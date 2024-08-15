@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0a53c40d.css",
+    "main.js": "/static/js/main.9f2aa862.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/blog.jpg": "/static/media/blog.47302b97c64faa469031.jpg",
+    "static/media/Servicesbackground.jpg": "/static/media/Servicesbackground.bf7ff8503e81edccd1c9.jpg",
+    "static/media/aboutus.avif": "/static/media/aboutus.89df96e2e120def8bf69.avif",
+    "static/media/signupimage.png": "/static/media/signupimage.ea331df34f286ada6126.png",
+    "static/media/dedicated-team.svg": "/static/media/dedicated-team.67f9ffe84eb60f34fe7a7cfb4222783a.svg",
+    "static/media/react-development.svg": "/static/media/react-development.503a9258704e63c1246994850cced1c4.svg",
+    "index.html": "/index.html",
+    "static/media/angular-development.svg": "/static/media/angular-development.fd4e61bab5be2b678efa449de9e99751.svg",
+    "static/media/web-development.svg": "/static/media/web-development.f095d7a699407bf1190410b004678f8e.svg",
+    "static/media/UIdesign.svg": "/static/media/UIdesign.ade6a59a207efe900869ea6a64d5baf5.svg",
+    "static/media/ror-development.svg": "/static/media/ror-development.c51ac5deb7ba2b0a595758acb3ed6428.svg",
+    "static/media/mobile-development.svg": "/static/media/mobile-development.6b5f0c80f0abb0d116db7d21dbe689f4.svg",
+    "main.0a53c40d.css.map": "/static/css/main.0a53c40d.css.map",
+    "main.9f2aa862.js.map": "/static/js/main.9f2aa862.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a53c40d.css",
+    "static/js/main.9f2aa862.js"
+  ]
+}
