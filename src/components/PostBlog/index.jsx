@@ -45,7 +45,7 @@ const PostBlog = () => {
     formData.append("image", data.image[0]);
     formData.append("content", body);
 
-    let res = await axios.post(`${apiUrl}/posts/`, formData, {
+    let res = await axios.post(`${apiUrl}/posts`, formData, {
       headers: {
         "Content-Type":
           "multipart/form-data; boundary=<calculated when request is sent>",
@@ -87,6 +87,7 @@ const PostBlog = () => {
       <ToastContainer />
       <MainWrapper>
         <Editor
+        apiKey="1fcrss3d3ljiwi8iz598ygs3okj0qjcf3kg4573mb5ttk55h"
           onEditorChange={(data) => {
             setBody(data);
           }}
