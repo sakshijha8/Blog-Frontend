@@ -27,6 +27,7 @@ import {
   Input,
 } from "styles/components/Login";
 import { useState } from "react";
+import { apiUrl } from "utils";
 
 // Schema for Yup Validation
 const SignupSchema = yup.object().shape({
@@ -54,8 +55,7 @@ const Register = () => {
 
   const getData =  async (data: any) => {
     
-    let res = await axios.post('https://blog-mern-app-delta.vercel.app/user/signup', data);
-    console.log(res);
+    let res = await axios.post(`${apiUrl}/user/signup`, data);
 
     // Add Toaster from Backend
     if (res.data.message === "SignUp Successfully!") {

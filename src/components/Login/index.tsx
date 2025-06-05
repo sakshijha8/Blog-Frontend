@@ -21,6 +21,7 @@ import {
 import { SpanDiv } from "styles/components/Signup";
 import { ILogin } from "interfaces/ILogin";
 import { useNavigate } from "react-router-dom";
+import { apiUrl } from "utils";
 
 // Schema for Yup Validation
 const LoginSchema = yup.object().shape({
@@ -35,10 +36,10 @@ const Login = () => {
     formState: { errors },
   } = useForm<ILogin>({ resolver: yupResolver(LoginSchema) });
   const getData = async (data: any) => {
-    let res = await axios.post('https://blog-mern-app-delta.vercel.app/user/signin', data);
+    let res = await axios.post(`${apiUrl}/user/signin`, data);
     localStorage.clear()
-  
-    localStorage.setItem('login',res.data.JWT)
+
+    localStorage.setItem('login', res.data.JWT)
 
     console.log(res);
     if (res.data.message === "User has loggedIn") {

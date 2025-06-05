@@ -6,6 +6,8 @@ import Comment from "components/Comment";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import { Heading, Likeunlike } from "styles/components/Comment";
+import { apiUrl } from "utils";
+
 const Content = () => {
   const [like, setLike] = useState(false);
   const [dislike, setDislike] = useState(false);
@@ -18,7 +20,7 @@ const Content = () => {
   useEffect(() => {
     const getData = async () => {
       let post: any = await axios.get(
-        `https://blog-mern-app-delta.vercel.app/posts/content/${postid}`
+        `${apiUrl}/posts/content/${postid}`
       );
       setUser(post.data.data.userId);
       setData(post.data.data.content);
@@ -29,14 +31,14 @@ const Content = () => {
 
   const getCommData = async () => {
     let commentList: any = await axios.get(
-      `https://blog-mern-app-delta.vercel.app/showcomment/${postid}`
+      `${apiUrl}/showcomment/${postid}`
     );
     setComment(commentList.data.data);
     console.log("comment list", commentList?.data.data);
   };
 
   const handleLike = async () => {
-    let islike = await axios.post('https://blog-mern-app-delta.vercel.app/posts/like', {
+    let islike = await axios.post(`${apiUrl}/posts/like`, {
       postId: postid,
     });
     console.log(islike)
@@ -52,10 +54,9 @@ const Content = () => {
     }
   };
   const handledisLike = async () => {
-    let disislike = await axios.post('https://blog-mern-app-delta.vercel.app/posts/dislike', {
+    let disislike = await axios.post(`${apiUrl}/posts/dislike`, {
       postId: postid,
     });
-    //console.log(disislike)
     if (disislike.data.data.includes(user)) {
       setDislike((prevState: any) => {
         return !prevState;

@@ -14,14 +14,14 @@ import {
   ParaHeading,Line,ReadDiv,
   ReadHeading,LikeWrapper
 } from "styles/components/Blogs";
-
+import { apiUrl } from "utils";
 
 const Blog = () => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   const getData = async () => {
     try {
-      const response = await axios.get('https://blog-mern-app-delta.vercel.app/posts/getposts');
+      const response = await axios.get(`${apiUrl}/posts/getposts`);
       setData(response.data)
     } catch (error) {
       console.log(error);

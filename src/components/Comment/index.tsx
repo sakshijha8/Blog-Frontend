@@ -2,13 +2,14 @@ import axios from 'axios'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { CommentWrapper,Button,Heading1,Heading2, BoxComment} from 'styles/components/Comment'
+import { apiUrl } from 'utils'
 
 const Comment = ({getCommData}:any) => {
   const routeParams = useParams<string>();
     const [input,setInput]=useState("")
     const [comment,setComment]=useState("")
     const handleInput=async()=>{
-       let res =await axios.post('https://blog-mern-app-delta.vercel.app/posts/comment',{
+       let res =await axios.post(`${apiUrl}/posts/comment`,{
         comment:input,
         postId:routeParams.id
        })
